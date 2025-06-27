@@ -3,7 +3,7 @@ version: '3.3'
 services:
   wordpress:
     image: wordpress:latest
-    container_name: Wordpress_Website 
+    container_name: Wordpress
     restart: always
     ports:
       - "$WORDPRESS_HOST_PORT:80"
@@ -19,7 +19,7 @@ services:
 
   db:
     image: mariadb:latest
-    container_name: Wordpress_DataBase
+    container_name: Wordpress_DB
     restart: always
     environment:
       MYSQL_DATABASE: $WORDPRESS_DB_NAME
